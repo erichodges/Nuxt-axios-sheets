@@ -1,6 +1,4 @@
-# cryptoapp
-
-> Nuxt.js project
+# Nuxt Axios Sheets Test
 
 ## Build Setup
 
