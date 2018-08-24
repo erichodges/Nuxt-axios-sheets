@@ -1,3 +1,5 @@
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+
 module.exports = {
   /*
   ** Headers of the page
@@ -21,7 +23,9 @@ module.exports = {
   css: ["~/assets/theme.scss", "vue-material/dist/vue-material.min.css"],
 
   plugins: ["~/plugins/vue-material.js"],
-
+  env: {
+    variable: process.env.API_KEY
+  },
   /*
   ** Customize the progress bar color
   */
@@ -29,12 +33,19 @@ module.exports = {
   /*
   ** Build configuration
   */
+ modules: [
+  // Simple usage
+  '@nuxtjs/dotenv',
+ ],
   build: {
     vendor: ["axios", "vue-material"],
     /*
     ** Run ESLint on save
     */
     extend(config, { isDev, isClient }) {
+      config.node = {
+        fs: 'empty'
+      };
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: "pre",
