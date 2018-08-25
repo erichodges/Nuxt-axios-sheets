@@ -1,6 +1,6 @@
 # Nuxt Axios Sheets Test
 
-## Build Setup
+### Build Setup
 
 ``` bash
 # install dependencies
