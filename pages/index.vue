@@ -1,8 +1,8 @@
 <template>
   <div>
-    <md-table v-model="currencies" md-sort="name" md-sort-order="asc" md-card>
+    <md-table v-model="people" md-sort="name" md-sort-order="asc" md-card>
       <md-table-toolbar>
-        <h1 class="md-title">Users</h1>
+        <h1 class="md-title">Marin Music Teachers</h1>
       </md-table-toolbar>
 
       <md-table-row slot="md-table-row" slot-scope="{ item }">
@@ -32,9 +32,9 @@ export default {
       .get(`https://sheets.googleapis.com/v4/spreadsheets/1SIfFSp_1In8V_NmIGjVtry-7478OJosu91J_toQT7gs/values/Sheet1?valueRenderOption=FORMATTED_VALUE&key=${process.env.API_KEY}`)
       .then(response => {
         return {
-          currencies: response.data.values
+          people: response.data.values
         };  
-      });      
+      });     
   },
   components: {
     Card
