@@ -1,6 +1,6 @@
 <template>
   <div>
-    <md-table v-model="people" md-sort="name" md-sort-order="asc" md-card>
+    <md-table v-model="object" md-sort="name" md-sort-order="asc" md-card>
       <md-table-toolbar>
         <h1 class="md-title">Marin Music Teachers</h1>
       </md-table-toolbar>
@@ -26,14 +26,27 @@ import axios from "axios";
 require('dotenv').config()
 import Card from "~/components/Card.vue";
 
+const convert = function(data) {
+  let keys = data[0];
+  let values = data.slice(1);
+  let object = {};
+  let objects = values.map(array => {
+  object = {};
+
+  keys.forEach((key, i) => object[key] = array[i]);
+  
+  return object;
+});
+console.log(JSON.stringify(objects));
+}
+
+
 export default {
   asyncData() {
     return axios
       .get(`https://sheets.googleapis.com/v4/spreadsheets/1SIfFSp_1In8V_NmIGjVtry-7478OJosu91J_toQT7gs/values/Sheet1?valueRenderOption=FORMATTED_VALUE&key=${process.env.API_KEY}`)
       .then(response => {
-        return {
-          people: response.data.values
-        };  
+        return convert(response.data.values);          
       });     
   },
   components: {
