@@ -1,16 +1,19 @@
 <template>
   <div>
-    <md-table v-model="object" md-sort="name" md-sort-order="asc" md-card>
+    <md-table v-model="test" md-sort="last-name" md-sort-order="asc" md-card>
       <md-table-toolbar>
         <h1 class="md-title">Marin Music Teachers</h1>
       </md-table-toolbar>
 
       <md-table-row slot="md-table-row" slot-scope="{ item }">
-        <md-table-cell md-label="ID" md-numeric>{{ item }}</md-table-cell>
-        <md-table-cell md-label="Name" md-sort-by="name">{{ item.name }}</md-table-cell>
+        <md-table-cell md-label="First Name" md-sort-by="first-name">{{ item.first-name }}</md-table-cell>
+        <md-table-cell md-label="Last Name" md-sort-by="last-name">{{ item.last-name }}</md-table-cell>
+        <md-table-cell md-label="Travel?" md-sort-by="travel">{{ item.travel }}</md-table-cell>
+        <md-table-cell md-label="Address" md-sort-by="address">{{ item.address }}</md-table-cell>
+        <md-table-cell md-label="City" md-sort-by="city">{{ item.city }}</md-table-cell>
+        <md-table-cell md-label="Phone" md-sort-by="phone">{{ item.phone }}</md-table-cell>
         <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
-        <md-table-cell md-label="Gender" md-sort-by="gender">{{ item.gender }}</md-table-cell>
-        <md-table-cell md-label="Job Title" md-sort-by="title">{{ item.title }}</md-table-cell>
+        <md-table-cell md-label="Instrument" md-sort-by="instrument">{{ item.instrument }}</md-table-cell>
       </md-table-row>
     </md-table>
 
@@ -31,13 +34,14 @@ const convert = function(data) {
   let values = data.slice(1);
   let object = {};
   let objects = values.map(array => {
-  object = {};
+    object = {};
 
-  keys.forEach((key, i) => object[key] = array[i]);
+    keys.forEach((key, i) => object[key] = array[i]);
   
-  return object;
-});
-console.log(JSON.stringify(objects));
+    return object;
+  });
+  this.test = JSON.stringify(objects);
+// console.log(JSON.stringify(objects));
 }
 
 
@@ -48,6 +52,9 @@ export default {
       .then(response => {
         return convert(response.data.values);          
       });     
+  },
+  data: () => {
+    test: []
   },
   components: {
     Card
