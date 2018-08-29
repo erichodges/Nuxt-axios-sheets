@@ -1,7 +1,7 @@
 <template>
     <div>
 
-    <md-table v-model="teachers" md-sort="lastName" md-sort-order="desc" md-card>
+    <md-table v-model="teachers" md-sort="city" md-sort-order="desc" md-card>
       <md-table-toolbar>
         <h1 class="md-title">Marin Music Teachers</h1>
       </md-table-toolbar>
@@ -13,9 +13,10 @@
         <md-table-cell md-label="Last Name" md-sort-by="lastName">
           {{ item.lastName }}
         </md-table-cell>
-        <md-table-cell md-label="Travel?" md-sort-by="travel">{{ item.travel }}</md-table-cell>
-        <md-table-cell md-label="Address" md-sort-by="address">{{ item.address }}</md-table-cell>
         <md-table-cell md-label="City" md-sort-by="city">{{ item.city }}</md-table-cell>
+        <md-table-cell md-label="Will Travel?" md-sort-by="travel">{{ item.travel }}</md-table-cell>
+        <md-table-cell md-label="Address" md-sort-by="address">{{ item.address }}</md-table-cell>
+        
         <md-table-cell md-label="Phone" md-sort-by="phone">{{ item.phone }}</md-table-cell>
         <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
         <md-table-cell md-label="Instrument" md-sort-by="instrument">{{ item.instrument }}</md-table-cell>
