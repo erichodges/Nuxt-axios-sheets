@@ -1,6 +1,6 @@
 <template>
   <div>
-    <toolbar></toolbar>
+    <toolbar/>
     <nuxt/>
   </div>
 </template>

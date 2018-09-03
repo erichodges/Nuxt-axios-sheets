@@ -4,7 +4,7 @@
       <span>MTAC</span>
       <span>Marin</span>
     </h1>
-    <h2>Music Teachers' Association of California
+    <h2 class="MTAC-heading">Music Teachers' Association of California
       <br> Marin County Branch</h2>
     <div class="datesandhours">
       <h3>10.Januar bis 30.April 1960</h3>
@@ -41,6 +41,10 @@ html {
 body {
   background: #333735;
   color: #B3413D; }
+
+.MTAC-heading {
+  color: antiquewhite;
+}
 
 h1 {
   font-size: calc(2.5rem + 20vw);

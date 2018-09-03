@@ -1,78 +1,101 @@
 <template>
-    <div>
+  <main>
+    <h1>
+      <span>MTAC</span>
+      <span>marin</span>
+    </h1>
+    <h2 class="MTAC-heading">Music Teachers' Association of California
+      <br> Marin County Branch</h2>
+    <div class="datesandhours">
+      <!-- <h3>10.Januar bis 30.April 1960</h3>
+      <div>Offen: Montag 14-18, 20-22</div>
+      <div>Dienstag-Frietag 10-12, 14-18, 20-22</div>
+      <div>Samstag-Sonnttag 10-12, 14-17</div> -->
+    </div>
 
-    <md-table v-model="teachers" md-sort="city" md-sort-order="desc" md-card>
-      <md-table-toolbar>
-        <h1 class="md-title">Marin Music Teachers</h1>
-      </md-table-toolbar>
-
-      <md-table-row slot="md-table-row" slot-scope="{ item }">
-        <md-table-cell md-label="First Name" md-sort-by="firstName">
-          {{ item.firstName }}
-        </md-table-cell>
-        <md-table-cell md-label="Last Name" md-sort-by="lastName">
-          {{ item.lastName }}
-        </md-table-cell>
-        <md-table-cell md-label="City" md-sort-by="city">{{ item.city }}</md-table-cell>
-        <md-table-cell md-label="Will Travel?" md-sort-by="travel">{{ item.travel }}</md-table-cell>
-        <md-table-cell md-label="Address" md-sort-by="address">{{ item.address }}</md-table-cell>
-        
-        <md-table-cell md-label="Phone" md-sort-by="phone">{{ item.phone }}</md-table-cell>
-        <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
-        <md-table-cell md-label="Instrument" md-sort-by="instrument">{{ item.instrument }}</md-table-cell>
-      </md-table-row>
-    </md-table>
-
-  </div>
+  </main>
 </template>
 
 <script>
-import axios from "axios";
-require('dotenv').config()
-import Card from "~/components/Card.vue";
-
 export default {
-  data() {
-    return {
-      teachers: []
-    }
-
-  },
-  components: {
-    Card
-  },
-  mounted() {
-    this.getData()
-  },
-  methods: {
-    onConvert(data) {
-      let keys = data[0];
-      let values = data.slice(1);
-      let object = {};
-      let objects = values.map(array => {
-        object = {};
-
-        keys.forEach((key, i) => object[key] = array[i]);
-
-        return object;
-      });
-      this.teachers = objects;
-    },
-
-    getData() {
-      return axios
-        .get(`https://sheets.googleapis.com/v4/spreadsheets/1SIfFSp_1In8V_NmIGjVtry-7478OJosu91J_toQT7gs/values/Sheet1?valueRenderOption=FORMATTED_VALUE&key=${process.env.API_KEY}`)
-        .then(response => {
-          this.onConvert(response.data.values);
-        });
-    },
-  }
-};
+  layout: 'index'
+}
 </script>
 
-<style scoped>
-#cards {
-  margin: auto;
-  padding: 20px;
+<style>
+  * {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Neue Haas Grotesk W01 Disp', Helvetica, sans-serif;
+  line-height: 1;
+  font-size: 100%;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+body {
+  background: #333735;
+  color: #B3413D; }
+
+.MTAC-heading {
+  color: #E5E1D5;
+  margin: 0;
 }
+
+h1 {
+  font-size: calc(2rem + 20vw);
+  letter-spacing: -0.04em;
+  display: contents;
+  opacity: 0.8; }
+  h1 span:nth-of-type(1) {
+    color: rgba(185, 32, 19, 0.849);
+    margin-left: -0.14em; }
+  h1 span:nth-of-type(2) {
+    color: #E5E1D5;
+    margin-left: -0.05em; }
+
+h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block; }
+
+main {
+  /* autoprefixer: off */
+  display: grid;
+  grid-template-columns: minmax(10vw, 35vw) -webkit-max-content -webkit-min-content;
+  grid-template-rows: 3vh auto 1fr -webkit-min-content auto 0.5vh;
+  grid-template-columns: minmax(10vw, 35vw) max-content min-content;
+  grid-template-rows: 3vh auto 1fr min-content auto 0.5vh;
+  height: 92vh; }
+
+h1 span:nth-of-type(1) {
+  /* autoprefixer: off */
+  grid-row: 4;
+  grid-column: 1 / 3; }
+
+h1 span:nth-of-type(2) {
+  /* autoprefixer: off */
+  grid-row: 4;
+  grid-column: 2 / 4; }
+
+h2 {
+  /* autoprefixer: off */
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: block;
+
+  grid-row: 2;
+  grid-column: 2; }
+
+.datesandhours {
+  /* autoprefixer: off */
+  margin-top: 7rem;
+  grid-row: 5;
+  grid-column: 2; }
+
 </style>
