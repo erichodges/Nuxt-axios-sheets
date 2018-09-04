@@ -7,13 +7,14 @@
       <h3 class="md-title logo">MTAC Marin</h3>
       <div class="divSpacer"></div>      
       <ul class="ul-nav">
-        <nuxt-link to="/teachers"><li class="nav__li">Teachers</li></nuxt-link>
+        <li class="nav__li">About</li>
+        <nuxt-link to="/teachers"><li class="nav__li">Teachers</li></nuxt-link>        
         <li class="nav__li">Calendar</li>
         <li class="nav__li">Forms/Docs</li>
         <li class="nav__li">Merit Cert</li>
         <li class="nav__li">Scholarship</li>
         <li class="nav__li">Media</li>
-        <li class="nav__li">About</li>
+        
       </ul>
     </md-toolbar>
 
