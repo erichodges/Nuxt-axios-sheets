@@ -1,11 +1,11 @@
 <template>
   <div>
      <md-toolbar md-elevation="0" class="md-transparent md-dense header">
-      <md-button class="md-icon-button" @click="showNavigation=true">
+      <md-button class="md-icon-button burger" @click="showNavigation=true">
         <md-icon class="navbar">menu</md-icon>
       </md-button>
       <h3 class="md-title logo">MTAC Marin</h3>
-      <div class="divSpacer"></div>      
+      <!-- <div class="divSpacer"></div>       -->
       <ul class="ul-nav">
         <li class="nav__li">About</li>
         <nuxt-link to="/teachers"><li class="nav__li">Teachers</li></nuxt-link>        
@@ -58,55 +58,72 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .navbar {
-    color: antiquewhite !important;
-  }
 
-  .logo {
-    color: #E5E1D5 !important;
-    margin-right: auto;
-  }
-
-  .ul-nav {  
-  display: flex;
-  padding: 0;
-  list-style: none;
-  align-items: center;
-  // justify-content: space-between;
+.burger {  
   
-    @media only screen and (max-width: 1120px) {
-      visibility: hidden;  
-      height: 0;  
-    }
-  }
 
-  .md-toolbar.md-dense {
-    min-height: 48px;
-    max-height: 75px;
+  @media only screen and (min-width: 1120px) {
+     visibility: hidden;
+     width: 0;
+  }
 }
 
-  .divSpacer {
-    margin-right: 5rem;
-    margin-left: 5rem;  
+.navbar {
+  color: antiquewhite !important;
+}
+
+.logo {
+  color: #E5E1D5 !important;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.ul-nav {  
+display: flex;
+padding: 0;
+list-style: none;
+align-items: center;
+// justify-content: space-between;
+
+  @media only screen and (max-width: 1120px) {
+    visibility: hidden;  
+    height: 0; 
+    width: 0; 
   }
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
+//   .md-toolbar.md-dense {
+//     min-height: 48px;
+//     max-height: 75px;
+// }
+
+  // .divSpacer {
+  //   margin-right: 5rem;
+  //   margin-left: 5rem;  
+  // }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  // height: 48px !important;
+}
+
+.md-title.logo {
+  margin-left: 0;
+}
+
+.nav__li {
+  color: #E5E1D5 !important;
+  margin-right: 2rem;
+
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block;
+
+  @media only screen and (max-width: 1120px) {
+    visibility: hidden;    
   }
-
-  .nav__li {
-    color: #E5E1D5 !important;
-    margin-right: 2rem;
-
-    font-weight: 500;
-    font-size: 1.1rem;
-    display: block;
-
-    @media only screen and (max-width: 1120px) {
-     visibility: hidden;    
-   }
-  }
+}
 
  
 </style>

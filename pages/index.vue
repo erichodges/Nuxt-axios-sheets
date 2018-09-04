@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   * {
   box-sizing: border-box; }
 
@@ -45,6 +45,10 @@ body {
 .MTAC-heading {
   color: #E5E1D5;
   margin: 0;
+
+  // @media only screen and (min-width: 1120px) {
+
+  // }
 }
 
 h1 {
