@@ -24,7 +24,7 @@ module.exports = {
 
   plugins: ["~/plugins/vue-material.js"],
   env: {
-    variable: process.env.API_KEY
+    variable: process.env.TEACHERS
   },
   /*
   ** Customize the progress bar color
