@@ -24,7 +24,7 @@ module.exports = {
 
   plugins: ["~/plugins/vue-material.js"],
   env: {
-    variable: process.env.TEACHERS,
+    TEACHERS: process.env.TEACHERS,
     HEAD: process.env.HEAD || 'not defined'
   },
   /*
