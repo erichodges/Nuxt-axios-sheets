@@ -20,6 +20,7 @@
 export default {
   layout: 'index'
 }
+console.log(process.env.HEAD);
 </script>
 
 <style lang="scss">
