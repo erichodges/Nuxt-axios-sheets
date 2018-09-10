@@ -9,7 +9,7 @@
       <ul class="ul-nav">
         <li class="nav__li">About</li>
         <nuxt-link to="/teachers"><li class="nav__li">Teachers</li></nuxt-link>        
-        <li class="nav__li">Calendar</li>
+        <nuxt-link to="/calendar"><li class="nav__li">Calendar</li></nuxt-link>   
         <li class="nav__li">Forms/Docs</li>
         <li class="nav__li">Merit Cert</li>
         <li class="nav__li">Scholarship</li>
