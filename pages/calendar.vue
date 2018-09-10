@@ -5,7 +5,7 @@
         <h1 class="md-title">Marin Music Teachers</h1>
       </md-table-toolbar>
       <md-table-row slot="md-table-row" slot-scope="{ item }">
-        <md-table-cell class="table-cell" md-label="Date" md-sort-by="date">
+        <md-table-cell class="table-cell" md-label="Date">
           {{ item.date }}
         </md-table-cell>
         <md-table-cell md-label="Time" md-sort-by="time">
