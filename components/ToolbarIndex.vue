@@ -62,7 +62,7 @@ export default {
 .burger {  
   
 
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1060px) {
      visibility: hidden;
      width: 0;
   }
@@ -85,7 +85,7 @@ list-style: none;
 align-items: center;
 // justify-content: space-between;
 
-  @media only screen and (max-width: 1120px) {
+  @media only screen and (max-width: 1060px) {
     visibility: hidden;  
     height: 0; 
     width: 0; 
@@ -120,7 +120,7 @@ align-items: center;
   font-size: 1.1rem;
   display: block;
 
-  @media only screen and (max-width: 1120px) {
+  @media only screen and (max-width: 1060px) {
     visibility: hidden;    
   }
 }

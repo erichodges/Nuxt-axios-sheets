@@ -43,8 +43,9 @@ body {
   color: #B3413D; }
 
 .MTAC-heading {
-  color: #E5E1D5;
+  color: rgb(240, 236, 226);
   margin: 0;
+  margin-top: 1rem;
 
   // @media only screen and (min-width: 1120px) {
 
