@@ -25,7 +25,7 @@
 <script>
 import axios from "axios";
 require('dotenv').config()
-import Card from "~/components/Card.vue";
+
 
 export default {
   data() {
