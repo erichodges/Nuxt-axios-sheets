@@ -46,9 +46,20 @@ body {
   color: rgb(240, 236, 226);
   margin: 0;
   margin-top: 1rem;
+  
 
-  // @media only screen and (min-width: 1120px) {
+  @media only screen and (max-width: 790px) {
+    font-weight: 500;
+    font-size: 1.4rem;
+    display: block;
 
+
+  }
+
+  //   @media only screen and (max-width: 630px) {
+  //   font-weight: 500;
+  //   font-size: 1.1rem;
+  //   display: block;
   // }
 }
 
@@ -76,7 +87,14 @@ main {
   grid-template-rows: 3vh auto 1fr -webkit-min-content auto 0.5vh;
   grid-template-columns: minmax(10vw, 35vw) max-content min-content;
   grid-template-rows: 3vh auto 1fr min-content auto 0.5vh;
-  height: 92vh; }
+  height: 92vh; 
+  
+    @media only screen and (max-width: 750px) {
+      grid-template-columns: minmax(10vw, 35vw) min-content min-content;
+
+  }
+  
+  }
 
 h1 span:nth-of-type(1) {
   /* autoprefixer: off */
