@@ -49,8 +49,14 @@ li a {
 
 .MTAC-heading {
   color: rgb(240, 239, 233);
+  font-weight: 800;
+  font-size: 1.6rem;
+  
+  line-height: 1.6rem;
   margin: 0;
   margin-top: 1rem;
+
+  display: block;
   
 
   @media only screen and (max-width: 790px) {

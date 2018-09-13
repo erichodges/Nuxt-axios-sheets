@@ -69,11 +69,11 @@ export default {
 }
 
 .navbar {
-  color: antiquewhite !important;
+  color: rgb(240, 239, 233) !important;
 }
 
 .logo {
-  color: #f2b632 !important;
+  color: rgb(240, 239, 233) !important;
   margin-right: auto;
   margin-left: 0;
 }
