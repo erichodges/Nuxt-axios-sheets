@@ -8,8 +8,8 @@
       <!-- <div class="divSpacer"></div>       -->
       <ul class="ul-nav">
         <li class="nav__li">About</li>
-        <nuxt-link to="/teachers"><li class="nav__li">Teachers</li></nuxt-link>        
-        <nuxt-link to="/calendar"><li class="nav__li">Calendar</li></nuxt-link>   
+        <nuxt-link to="/teachers" tag="li"><li class="nav__li">Teachers</li></nuxt-link>        
+        <nuxt-link to="/calendar" tag="li"><li class="nav__li">Calendar</li></nuxt-link>   
         <li class="nav__li">Forms/Docs</li>
         <li class="nav__li">Merit Cert</li>
         <li class="nav__li">Scholarship</li>
@@ -73,7 +73,7 @@ export default {
 }
 
 .logo {
-  color: #E5E1D5 !important;
+  color: #f2b632 !important;
   margin-right: auto;
   margin-left: 0;
 }
@@ -112,13 +112,17 @@ align-items: center;
   margin-left: 0;
 }
 
+li a {
+  text-decoration: none !important;
+}
+
 .nav__li {
   color: #E5E1D5 !important;
   margin-right: 2rem;
-
+  cursor: pointer;
+  display: block;
   font-weight: 500;
   font-size: 1.1rem;
-  display: block;
 
   @media only screen and (max-width: 1060px) {
     visibility: hidden;    

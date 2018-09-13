@@ -40,10 +40,15 @@ html {
 
 body {
   background: #333735;
-  color: #B3413D; }
+  color: #B3413D; 
+}
+
+li a {
+    text-decoration: none !important;
+}
 
 .MTAC-heading {
-  color: rgb(240, 236, 226);
+  color: rgb(240, 239, 233);
   margin: 0;
   margin-top: 1rem;
   
@@ -69,12 +74,12 @@ h1 {
   display: contents;
   opacity: 0.8; }
   h1 span:nth-of-type(1) {
-    color: rgba(185, 32, 19, 0.849);
+    color: rgba(185, 32, 19, 0.7);
     margin-left: -0.14em; }
   h1 span:nth-of-type(2) {
-    color: #E5E1D5;
+    color: rgba(245, 245, 245, 0.7);
     margin-left: -0.05em; }
-
+  // E5E1D5
 h3 {
   font-weight: 500;
   font-size: 1.1rem;

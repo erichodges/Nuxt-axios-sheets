@@ -2,7 +2,7 @@
     <div>
     <md-table v-model="teachers" md-sort="city" md-sort-order="desc" md-card>
       <md-table-toolbar>
-        <h1 class="md-title">Marin Music Teachers</h1>
+        <h1 class="md-title">MTAC Marin Music Teachers</h1>
       </md-table-toolbar>
       <md-table-row slot="md-table-row" slot-scope="{ item }">
         <md-table-cell class="table-cell" md-label="First Name" md-sort-by="firstName">
