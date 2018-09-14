@@ -36,7 +36,8 @@ html {
   font-kerning: normal;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%; }
+  // text-size-adjust: 100%; 
+}
 
 body {
   background: #333735;
@@ -85,7 +86,8 @@ h1 {
   h1 span:nth-of-type(2) {
     color: rgba(245, 245, 245, 0.7);
     margin-left: -0.05em; }
-  // E5E1D5
+  // E5E1D5 - old color
+
 h3 {
   font-weight: 500;
   font-size: 1.1rem;
@@ -103,19 +105,32 @@ main {
     @media only screen and (max-width: 750px) {
       grid-template-columns: minmax(10vw, 35vw) min-content min-content;
 
-  }
+    }
   
   }
 
 h1 span:nth-of-type(1) {
   /* autoprefixer: off */
   grid-row: 4;
-  grid-column: 1 / 3; }
+  grid-column: 1 / 3; 
+
+  @media only screen and (max-width: 750px) {
+    grid-row: 5;
+    margin-top: 2rem;
+  }
+
+}
 
 h1 span:nth-of-type(2) {
   /* autoprefixer: off */
   grid-row: 4;
-  grid-column: 2 / 4; }
+  grid-column: 2 / 4; 
+
+  @media only screen and (max-width: 750px) {
+    grid-row: 5;
+    margin-top: 2rem;
+  }
+}
 
 h2 {
   /* autoprefixer: off */
