@@ -84,7 +84,8 @@ align-items: center;
 // justify-content: space-between;
 
   @media only screen and (max-width: 1060px) {
-    visibility: hidden;  
+    visibility: hidden;
+    display: none;
     height: 0; 
     width: 0; 
   }
