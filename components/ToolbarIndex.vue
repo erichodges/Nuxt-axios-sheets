@@ -19,27 +19,25 @@
     </md-toolbar>
 
     <md-drawer :md-active.sync="showNavigation">
-      <md-toolbar class="md-transparent" md-elevation="0">
+      <!-- <md-toolbar class="md-transparent" md-elevation="0">
       <span class="md-title">My App name</span>
-      </md-toolbar>
+      </md-toolbar> -->
 
       <md-list>
         <md-list-item>          
-          <nuxt-link to="/teachers"><span class="md-list-item-text">Teachers</span></nuxt-link>
+          
+          <span class="md-list-item-text"><nuxt-link to="/teachers">Teachers</nuxt-link></span>
         </md-list-item>
 
-        <md-list-item>
-          <md-icon>send</md-icon>
+        <md-list-item>          
           <span class="md-list-item-text">Sent Mail</span>
         </md-list-item>
 
-        <md-list-item>
-          <md-icon>delete</md-icon>
+        <md-list-item>          
           <span class="md-list-item-text">Trash</span>
         </md-list-item>
 
-        <md-list-item>
-          <md-icon>error</md-icon>
+        <md-list-item>          
           <span class="md-list-item-text">Spam</span>
         </md-list-item>
       </md-list>
@@ -92,15 +90,6 @@ align-items: center;
   }
 }
 
-//   .md-toolbar.md-dense {
-//     min-height: 48px;
-//     max-height: 75px;
-// }
-
-  // .divSpacer {
-  //   margin-right: 5rem;
-  //   margin-left: 5rem;  
-  // }
 
 .header {
   display: flex;

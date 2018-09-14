@@ -24,7 +24,7 @@
 
 <script>
 import axios from "axios";
-require('dotenv').config()
+require('dotenv').config();
 
 
 export default {
